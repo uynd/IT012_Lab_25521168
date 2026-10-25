@@ -9,7 +9,7 @@ nl:     .asciiz "\n"
 .text
 .globl main
 main:
-    # --- 1. Nh?p ch? s? ??u th·ng 1 (reading0) v‡o $s0 ---
+    # --- 1. Nh?p ch? s? ??u th√°ng 1 (reading0) v√†o $s0 ---
     li   $v0, 4
     la   $a0, prompt
     syscall
@@ -17,7 +17,7 @@ main:
     syscall
     move $s0, $v0
 
-    # --- 2. Nh?p ch? s? ??u th·ng 2 (reading1) v‡o $s1 ---
+    # --- 2. Nh?p ch? s? ??u th√°ng 2 (reading1) v√†o $s1 ---
     li   $v0, 4
     la   $a0, prompt
     syscall
@@ -25,7 +25,7 @@ main:
     syscall
     move $s1, $v0
 
-    # --- 3. Nh?p ch? s? ??u th·ng 3 (reading2) v‡o $s2 ---
+    # --- 3. Nh?p ch? s? ??u th√°ng 3 (reading2) v√†o $s2 ---
     li   $v0, 4
     la   $a0, prompt
     syscall
@@ -33,7 +33,7 @@ main:
     syscall
     move $s2, $v0
 
-    # --- 4. Nh?p ch? s? cu?i th·ng 3 (reading3) v‡o $s3 ---
+    # --- 4. Nh?p ch? s? cu?i th√°ng 3 (reading3) v√†o $s3 ---
     li   $v0, 4
     la   $a0, prompt
     syscall
@@ -41,7 +41,7 @@ main:
     syscall
     move $s3, $v0
 
-    # --- 5. TÌnh to·n (d˘ng add, sub theo chu?n) ---
+    # --- 5. T√≠nh to√°n (d√πng add, sub theo chu?n) ---
     sub  $t0, $s1, $s0      # usage1 = reading1 - reading0
     sub  $t1, $s2, $s1      # usage2 = reading2 - reading1
     sub  $t2, $s3, $s2      # usage3 = reading3 - reading2
@@ -49,7 +49,7 @@ main:
     add  $t3, $t0, $t1      # T?ng t?m = usage1 + usage2
     add  $t3, $t3, $t2      # total = T?ng t?m + usage3
 
-    # --- 6. In k?t qu? ra m‡n hÏnh ---
+    # --- 6. In k?t qu? ra m√†n h√¨nh ---
     
     # In "Thang 1: " + usage1
     li   $v0, 4
@@ -95,6 +95,6 @@ main:
     la   $a0, nl
     syscall
 
-    # K?t th˙c ch??ng trÏnh
+    # K?t th√∫c ch??ng tr√¨nh
     li   $v0, 10
     syscall
