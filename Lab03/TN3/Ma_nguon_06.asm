@@ -14,7 +14,7 @@ newline:    .asciiz "\n"
 .text
 .globl main
 main:
-    # --- 1. ??c reading0 v‡o $s0 ---
+    # --- 1. ??c reading0 v√†o $s0 ---
     li   $v0, 4
     la   $a0, prompt0
     syscall
@@ -23,7 +23,7 @@ main:
     syscall
     move $s0, $v0          
 
-    # --- 2. ??c reading1 v‡o $s1 ---
+    # --- 2. ??c reading1 v√†o $s1 ---
     li   $v0, 4
     la   $a0, prompt1
     syscall
@@ -32,7 +32,7 @@ main:
     syscall
     move $s1, $v0           
 
-    # --- 3. ??c reading2 v‡o $s2 ---
+    # --- 3. ??c reading2 v√†o $s2 ---
     li   $v0, 4
     la   $a0, prompt2
     syscall
@@ -41,7 +41,7 @@ main:
     syscall
     move $s2, $v0          
 
-    # --- 4. ??c reading3 v‡o $s3 ---
+    # --- 4. ??c reading3 v√†o $s3 ---
     li   $v0, 4
     la   $a0, prompt3
     syscall
@@ -50,7 +50,7 @@ main:
     syscall
     move $s3, $v0      
 
-    # --- 5. TÌnh to·n (Ch? d˘ng add, sub theo yÍu c?u) ---
+    # --- 5. T√≠nh to√°n (Ch? d√πng add, sub theo y√™u c?u) ---
     sub  $t0, $s1, $s0      # usage1 = reading1 - reading0
     sub  $t1, $s2, $s1      # usage2 = reading2 - reading1
     sub  $t2, $s3, $s2      # usage3 = reading3 - reading2
@@ -58,7 +58,7 @@ main:
     add  $t3, $t0, $t1      # t?ng t?m = usage1 + usage2
     add  $t3, $t3, $t2      # total = t?ng t?m + usage3
 
-    # --- 6. In k?t qu? ra m‡n hÏnh theo ?˙ng ??nh d?ng ---
+    # --- 6. In k?t qu? ra m√†n h√¨nh theo ?√∫ng ??nh d?ng ---
     
     # In "Thang 1: " + usage1
     li   $v0, 4
